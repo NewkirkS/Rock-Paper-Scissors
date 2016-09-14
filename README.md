@@ -1,12 +1,12 @@
 # _Rock, Paper, Scissors :fist: :wave: :v:_
 
-#### _Play rock, paper, scissors, 9-14-16_
+#### _9-14-16_
 
 #### By _**Martin Cartledge**_
 
 ## Description
 
-_It's the game you know, and love. In this two player game each will decide their move - rock, paper, or scissors._
+_It's the game you know and love. In this two player game each will decide their move - rock, paper, or scissors._
 
 ## Rules of the game
 ```
