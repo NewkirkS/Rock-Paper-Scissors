@@ -53,6 +53,11 @@
                 }
 
         }
+        
+        static function deleteAll()
+        {
+            $_SESSION['collection'] = "";
+        }
 
     }
 ?>

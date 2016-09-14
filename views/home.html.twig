@@ -1,10 +1,24 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Template</title>
+    <title>Rock, Paper, Scissors</title>
   </head>
   <body>
-      <p>hi</p>
-      <a href="/test"><button type="submit" name="button">Tester</button></a>
+      <h1>Rock, Paper, Scissors</h1>
+
+      <a href="/player1"><button type="submit" name="button">Start Game</button></a>
+
+      {% if game is not empty %}
+        {% if game.win_condition == 1 %}
+            <h1>You Win {{ game.player_1.name }}</h1>
+            <h1>{{ game.player_1.action }} beats {{ game.player_2.action }}</h1>
+        {% elseif game.win_condition == 2 %}
+            <h1>You Win {{ game.player_2.name }}</h1>
+            <h1>{{ game.player_2.action }} beats {{ game.player_1.action }}</h1>
+        {% else %}
+            <h1>It's a tie!</h1>
+            <h1>Ya dummies both chose {{ game.player_1.action }}</h1>
+        {% endif %}
+      {% endif %}
   </body>
 </html>
