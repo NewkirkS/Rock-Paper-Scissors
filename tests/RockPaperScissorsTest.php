@@ -1,20 +1,20 @@
 <?php
-    require_once __DIR__. "src/RockPaperScissors.php";
+    require_once __DIR__. "/../src/RockPaperScissors.php";
 
     class RockPaperScissorsTest extends PHPUnit_Framework_TestCase
     {
         function test_rock_scissors()
         {
             // Arrange
-            $test_RockPaperScissors = new RockPaperScissors;
-            $first_input = "rock";
-            $second_input = "scissors";
+            $test_Player1 = new Player("Bob", "rock");
+            $test_Player2 = new Player("Jim", "scissors");
+            $test_RockPaperScissors = new RockPaperScissors($test_Player1, $test_Player2);
 
             // Act
-            $result = $test_RockPaperScissors->playGame($first_input, $second_input);
-
+            $test_RockPaperScissors->compareActions($test_Player1->action, $test_Player2->action);
+            $result = $test_RockPaperScissors->win_condition;
             // Assert
-            $this->assertEquals("Player 1", $result);
+            $this->assertEquals(1, $result);
         }
 
         // function test_rock_paper()

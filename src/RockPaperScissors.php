@@ -2,8 +2,8 @@
 
     class Player
     {
-        private $name;
-        private $action;
+        public $name;
+        public $action;
 
         function __construct($name, $action)
         {
@@ -14,19 +14,26 @@
 
     class RockPaperScissors
     {
-      private $player_1;
-      private $player_2;
-      private $win_condition;
+      public $player_1;
+      public $player_2;
+      public $win_condition;
 
         function __construct($player_1, $player_2, $win_condition = 0)
         {
             $this->player_1 = $player_1;
             $this->player_2 = $player_2;
-            $this->win_condition;
+            $this->win_condition = $win_condition;
         }
 
         function compareActions($player_1_action, $player_2_action)
         {
+            if (($player_1_action == "rock") && ($player_2_action == "scissors") || ($player_1_action == "scissors") && ($player_2_action == "rock")) {
+                if ($player_1_action == "rock") {
+                    $this->win_condition = 1;
+                } else {
+                    $this->win_condition = 2;
+                }
+            }
 
         }
 
