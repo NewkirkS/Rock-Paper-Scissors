@@ -43,6 +43,12 @@
         return $app['twig']->render("home.html.twig", array("game" => $_SESSION['game']));
     });
 
+    $app->get("/reset", function() use ($app) {
+        Player::deleteAllCollection();
+        RockPaperScissors::deleteAllGame();
+        return $app['twig']->render("home.html.twig", array("game" => $_SESSION['game']));
+    });
+
 
 
 

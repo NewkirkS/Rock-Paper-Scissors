@@ -2,7 +2,7 @@
 
 #### _9-14-16_
 
-#### By _**Martin Cartledge &amp;**_
+#### By _**Martin Cartledge &amp; Stephen Newkirk**_
 
 ## Description
 
@@ -64,4 +64,4 @@ Twig_
 
 *This webpage is licensed under the MIT license.*
 
-Copyright (c) 2016 **_Martin Cartledge &amp;_**
+Copyright (c) 2016 **_Martin Cartledge &amp; Stephen Newkirk_**

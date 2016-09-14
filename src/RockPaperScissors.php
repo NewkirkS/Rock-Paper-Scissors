@@ -16,6 +16,11 @@
             $_SESSION['collection'] = $this;
         }
 
+        static function deleteAllCollection()
+        {
+            $_SESSION['collection'] = "";
+        }
+
         static function getPlayer(){
             return $_SESSION['collection'];
         }
@@ -63,9 +68,9 @@
 
         }
 
-        static function deleteAll()
+        static function deleteAllGame()
         {
-            $_SESSION['collection'] = "";
+            $_SESSION['game'] = "";
         }
 
         static function getGame()
