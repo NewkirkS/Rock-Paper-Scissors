@@ -34,6 +34,23 @@
                     $this->win_condition = 2;
                 }
             }
+            if (($player_1_action == "rock") && ($player_2_action == "paper") || ($player_1_action == "paper") && ($player_2_action == "rock")) {
+                if ($player_1_action == "paper") {
+                    $this->win_condition = 1;
+                } else {
+                    $this->win_condition = 2;
+                }
+            }
+            if (($player_1_action == "paper") && ($player_2_action == "scissors") || ($player_1_action == "scissors") && ($player_2_action == "paper")) {
+                if ($player_1_action == "scissors") {
+                    $this->win_condition = 1;
+                } else {
+                    $this->win_condition = 2;
+                }
+            }
+            if ($player_1_action == $player_2_action)  {
+                    $this->win_condition = 3;
+                }
 
         }
 
