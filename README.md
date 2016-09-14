@@ -1,4 +1,4 @@
-# _Rock, Paper, Scissors :fist: :wave: :v:_
+# _Fistslammers :fist: :wave: :v:_
 
 #### _9-14-16_
 

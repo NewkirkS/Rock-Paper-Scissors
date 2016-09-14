@@ -1,0 +1,9 @@
+body {
+    background-image: url("http://theinspirationroom.com/daily/commercials/2016/3/android_rock_paper_scissors.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+h1 {
+    text-shadow: 5px 7px red;
+}
