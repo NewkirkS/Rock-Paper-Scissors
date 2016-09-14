@@ -10,6 +10,15 @@
             $this->name = $name;
             $this->action = $action;
         }
+
+        function save()
+        {
+            $_SESSION['collection'] = $this;
+        }
+
+        static function getPlayer(){
+            return $_SESSION['collection'];
+        }
     }
 
     class RockPaperScissors
@@ -18,11 +27,11 @@
       public $player_2;
       public $win_condition;
 
-        function __construct($player_1, $player_2, $win_condition = 0)
+        function __construct($player_1, $player_2)
         {
             $this->player_1 = $player_1;
             $this->player_2 = $player_2;
-            $this->win_condition = $win_condition;
+            $this->win_condition = 0;
         }
 
         function compareActions($player_1_action, $player_2_action)
@@ -53,10 +62,20 @@
                 }
 
         }
-        
+
         static function deleteAll()
         {
             $_SESSION['collection'] = "";
+        }
+
+        static function getGame()
+        {
+            return $_SESSION['game'];
+        }
+
+        function save()
+        {
+            $_SESSION['game'] = $this;
         }
 
     }
